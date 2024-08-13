@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .buy-again{
+        background-color: yellow;
+        color:black;
+      }
+      .js-add-to-cart{
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="buy-again" id="addButton">
+      <span id="target">buy again</span>
+    </button>
+    
+  </body>
+  <script>
+    const addButton = document.getElementById('addButton');
+    const target=document.getElementById('target')
+    target.addEventListener('click', function() {
+      // 添加需要的 class
+    target.classList.add('js-add-to-cart');
+      
+      
+      // 使用 setTimeout 在一秒后移除该 class
+    setTimeout(function() {
+      target.classList.remove('js-add-to-cart');
+    }, 1000); // 1000 毫秒 = 1 秒
+    });
+     
+  </script>
+</html>
